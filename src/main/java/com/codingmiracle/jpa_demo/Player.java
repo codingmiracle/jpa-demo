@@ -10,11 +10,38 @@ import jakarta.persistence.*;
 @Table(name = "Player")
 public class Player {
 
-    private static int lastid = 0;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
-
     private long playerid;
     private String name;
+
+    public Player() {}
+
+    public Player(String name) {
+        this.setName(name);
+    }
+
+    public Player(Long id) {
+        this.setPlayerid(id);
+    }
+
+    public long getPlayerid() {
+        return playerid;
+    }
+
+    public void setPlayerid(long playerid) {
+        this.playerid = playerid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static boolean isPlayerId(String value) {
+        return value.matches("^[0-9]*$");
+    }
 }

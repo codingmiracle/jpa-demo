@@ -5,7 +5,7 @@
              version="3.0">
     <persistence-unit name="default" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>xoxyz-serviceJNDI</jta-data-source>
+        <jta-data-source>jpa_demo</jta-data-source>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
             <property name="hibernate.transaction.jta.platform" value="SunOne"/>
